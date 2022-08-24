@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Salario_Funcionario
+{
+
+    internal class Program
+
+    {
+        static void Main(string[] args)
+        {
+            // Variavel para entrar com o valor de salário mensal e interação
+            int salMensal;
+           Console.WriteLine("Olá, Tudo bem? Vamos calcular quanto ganha por hora, dia, ano, através do seu   salário mensal?");
+           Console.WriteLine("\n");
+           Console.WriteLine("Qual seu nome?");
+           Console.ReadLine();
+
+            //Solicitar valor do salário mensal
+            
+            Console.WriteLine("Insira o valor do seu salário mensal");
+            salMensal = Convert.ToInt32(Console.ReadLine());
+            
+            // Mostrar menu de opcoes (valor de salario mensal ja digitado)
+            Console.WriteLine(("Escolha uma opção da lista"));
+            Console.WriteLine("1 - Hora");
+            Console.WriteLine("2 - Dia");
+            Console.WriteLine("3 - Ano");
+            Console.WriteLine("4 - Ano + decimo terceiro e 1/3 de ferias ");
+
+
+            //Realizar a ação de acordo com a opção escolhida
+            switch (Console.ReadLine())
+            {
+                case "1":
+                    Console.WriteLine($"O resultado de {salMensal} / {220} = " + (salMensal / 220));
+                    break;
+                case "2":
+                    Console.WriteLine($"O resultado de {salMensal} / {30} = " + (salMensal / 30));
+                    break;
+                case "3":
+                    Console.WriteLine($"O resultado de {salMensal} * {12} = " + (salMensal * 13));
+                    break;
+                case "4":
+                    Console.WriteLine($"O resultado de {salMensal} * {12} + {salMensal}+ {salMensal} / {3} = " + (salMensal * 12 + salMensal + salMensal / 3));
+                    break;
+
+            } 
+            //Despedida do usuário
+             Console.WriteLine("Espero ter ajudado, uma ótima semana!");
+             Console.ReadLine();
+
+            
+            Console.Write("Pressione qq tecla para fechar o aplicativo");
+            Console.ReadKey();
+        }
+    }
+}
